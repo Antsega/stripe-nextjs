@@ -1,4 +1,10 @@
+'use client'
 import Image from 'next/image'
+import { checkout } from '@/checkout' 
+import { useEffect, useState } from 'react' 
+import BuyButton from '@/components/BuyButton'
+
+
 
 export default function Home() {
   return (
@@ -47,17 +53,18 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          alt='loggi_face'
-          src="/images/logi.jpg"
-          width={400}
-          height={400} 
-          priority
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+            alt='loggi_face'
+            src="/images/logi.jpg"
+            width={400}
+            height={400} 
+            priority
           />
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className="m-0 max-w-[30ch] text-sm opacity-50">
             Buy Log
           </p>
         </a>
+          <BuyButton />
         
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
